@@ -25,7 +25,7 @@ app.post("/", (req, res) => {
     from: `${firstname} ${lastname} <${email}>`,
     to:
       "guerpillon.gregory@gmail.com" /* EMAIL AVEC LAQUELLE VOUS VOUS ÊTES ENREGISTRÉS SUR MAILGUN */,
-    subject: title,
+    subject: subject,
     text: message,
   };
   console.log(data);
