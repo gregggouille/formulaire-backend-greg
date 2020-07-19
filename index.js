@@ -14,12 +14,13 @@ app.get("/", (req, res) => {
   res.send("Server is up");
 });
 app.post("/", (req, res) => {
-  const { firstname, lastname, email, title, message } = req.fields;
+  const { firstname, lastname, email, subject, message } = req.fields;
   //   const firstname = req.fields.firstname;
   //   const lastname = req.fields.lastname;
   //   const email = req.fields.email;
   //   const title = req.fields.title;
   //   const message = req.fields.message;
+  res.status(200).json({ firstname, lastname, email, subject, message });
   /* CREATION DE L'OBJET DATA */
   const data = {
     from: `${firstname} ${lastname} <${email}>`,
